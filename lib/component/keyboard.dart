@@ -22,24 +22,28 @@ class Keyboard extends StatelessWidget {
             Button.operation(text: '/',callb: callb,),
             
           ]),
+          SizedBox(height: 1,),
           ButtonRow([
             Button(text: '7',callb: callb,),
             Button(text: '8',callb: callb,),
             Button(text: '9',callb: callb,),
             Button.operation(text: 'x',callb: callb,),
           ]),
+          SizedBox(height: 1,),
           ButtonRow([
             Button(text: '4',callb: callb,),
             Button(text: '5',callb: callb,),
             Button(text: '6',callb: callb,),
             Button.operation(text: '-',callb: callb,),
           ]),
+          SizedBox(height: 1,),
           ButtonRow([
             Button(text: '1',callb: callb,),
             Button(text: '2',callb: callb,),
             Button(text: '3',callb: callb,),
             Button.operation(text: '+',callb: callb,),
           ]),
+          SizedBox(height: 1,),
           ButtonRow([
             Button.big(text: '0',callb: callb,),
             Button(text: ',',callb: callb,),
