@@ -4,6 +4,12 @@ import 'button.dart';
 
 
 class Keyboard extends StatelessWidget {
+
+  final void Function(String) callb;
+
+  Keyboard(this.callb);
+
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -11,33 +17,33 @@ class Keyboard extends StatelessWidget {
       child: Column(
         children: <Widget>[
           ButtonRow([
-            Button.big(text: 'AC'),
-            Button(text: '%',),
-            Button.operation(text: '/',),
+            Button.big(text: 'AC', callb: callb,),
+            Button(text: '%',callb: callb,),
+            Button.operation(text: '/',callb: callb,),
             
           ]),
           ButtonRow([
-            Button(text: '7',),
-            Button(text: '8',),
-            Button(text: '9',),
-            Button.operation(text: 'x',),
+            Button(text: '7',callb: callb,),
+            Button(text: '8',callb: callb,),
+            Button(text: '9',callb: callb,),
+            Button.operation(text: 'x',callb: callb,),
           ]),
           ButtonRow([
-            Button(text: '4',),
-            Button(text: '5',),
-            Button(text: '6',),
-            Button.operation(text: '-',),
+            Button(text: '4',callb: callb,),
+            Button(text: '5',callb: callb,),
+            Button(text: '6',callb: callb,),
+            Button.operation(text: '-',callb: callb,),
           ]),
           ButtonRow([
-            Button(text: '1',),
-            Button(text: '2',),
-            Button(text: '3',),
-            Button.operation(text: '+',),
+            Button(text: '1',callb: callb,),
+            Button(text: '2',callb: callb,),
+            Button(text: '3',callb: callb,),
+            Button.operation(text: '+',callb: callb,),
           ]),
           ButtonRow([
-            Button.big(text: '0'),
-            Button(text: ',',),
-            Button.operation(text: '=',),
+            Button.big(text: '0',callb: callb,),
+            Button(text: ',',callb: callb,),
+            Button.operation(text: '=',callb: callb,),
           ]),
         ],
       ),
